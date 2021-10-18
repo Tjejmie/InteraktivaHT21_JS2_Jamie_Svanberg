@@ -19,15 +19,6 @@ const news = [
     },
 ]
 
-
-
-
-
-
-
-
-
-
 //1
 document.getElementById('ex01').textContent = 'done' 
 
@@ -44,35 +35,31 @@ node.appendChild(textnode);
 document.getElementById("shopping-list").appendChild(node); 
 
 //5
-News();
 
-    function News() {
-        let newsContent = document.getElementById("news");
-        for (let i = 0; i < news.length; i++) {
-            let newsHeadline = document.createElement("h2");
-            newsHeadline.textContent = news[i].headline;
-            newsContent.appendChild(newsHeadline);
-            newsHeadline.classList.add("red");
+
+let newsContent = document.getElementById("news");
+    for (let i = 0; i < news.length; i++) {
+    let newsHeadline = document.createElement("h2");
+    newsHeadline.textContent = news[i].headline;
+    newsContent.appendChild(newsHeadline);
+    newsHeadline.classList.add("red");
             
+    let newsSummary = document.createElement("p");
+    newsSummary.textContent = news[i].summary;
+    newsContent.appendChild(newsSummary);
 
-            let newsSummary = document.createElement("p");
-            newsSummary.textContent = news[i].summary;
-            newsContent.appendChild(newsSummary);
-
-            let newsAuthor = document.createElement("p");
-            newsAuthor.textContent = news[i].author;
-            newsAuthor.style.fontStyle = "cambria";
-            newsContent.appendChild(newsAuthor);
+    let newsAuthor = document.createElement("p");
+    newsAuthor.textContent = news[i].author;
+    newsAuthor.style.fontStyle = "cambria";
+    newsContent.appendChild(newsAuthor);
             
-            
-
-            let newsLink = document.createElement("a");
-            newsLink.textContent = "Link to article";
-            newsLink.href = news[i].href;
-            newsLink.classList.add("red");
-            newsContent.appendChild(newsLink);
+    let newsLink = document.createElement("a");
+    newsLink.textContent = "Link to article";
+    newsLink.href = news[i].href;
+    newsLink.classList.add("red");
+    newsContent.appendChild(newsLink);
         }
-    }
+    
 
 //6     
 var count = 0;
@@ -82,8 +69,6 @@ countPage.onclick = function(){
   count++;
   displayCount.innerHTML = count;
 }
-
-
 
 //7
 const button = document.querySelector('button'); 
@@ -99,17 +84,6 @@ document.getElementById("link-to-svt").addEventListener("click", function(event)
 //9
 document.querySelector("img").src= 'https://images.unsplash.com/photo-1634148521111-c21852cf5788?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1925&q=80"t';
   
-
-
-
-        
-
-
-
-    
-
-
-
 
 /** 
  * 
